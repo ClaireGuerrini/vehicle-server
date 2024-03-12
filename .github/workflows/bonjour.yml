@@ -16,4 +16,5 @@ jobs:
         uses: Code-Hex/neo-cowsay-action@v1
         with:
           message: ${{steps.readme.outputs.content}}
+          cow: 'random'
           
