@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
-      - run: 
+      - run: |
           sudo apt-get update
-          sudo apt-get install cowsay
+          sudo apt-get install -y cowsay
       - run: cat README.md | cowsay -s
