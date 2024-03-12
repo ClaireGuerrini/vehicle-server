@@ -16,5 +16,5 @@ jobs:
       - name: Build application
         run: make build
       - name: List dist output
-        run: ls dist/ 
+        run: ls /dist
           
