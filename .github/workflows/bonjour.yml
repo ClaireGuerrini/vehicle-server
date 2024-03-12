@@ -5,8 +5,8 @@ jobs:
   dire_bonjour:
     runs-on: ubuntu-22.04
     steps:
-      - name: Check out repository code
-        uses: actions/checkout@v4
-      - run: ls -l # Liste les fichier du répertoire courant
-      - run: cat README.md # Affiche le contenu du fichier `README.md` à la base du dépôt
+      - uses: actions/checkout@v4
+      - run: 
+          sudo apt-get update
+          sudo apt-get install -y cowsa
       - run: cat README.md | cowsay -s
