@@ -20,6 +20,10 @@ dist:
 package: 
 	docker image build --tag=$(IMAGE):$(TAG) . 
 
+.PHONY: release
+release:
+	docker push $(IMAGE):$(TAG)
+
 DB_CONTAINER_NAME=vehicle-server-dev
 POSTGRES_USER=vehicle-server
 POSTGRES_PASSWORD=secret
