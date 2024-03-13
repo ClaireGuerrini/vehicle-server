@@ -20,7 +20,7 @@ curl --header "Content-Type: application/json" --data '{"latitude": 3.32,"longit
 # Trouver les véhicules les plus proche
 
 ```bash
-curl localhost:8080/vehicles\?latitude=34.2\&longitude=23.4\&limit=10
+curl localhost:8080/vehicles\?latitude=3.32\&longitude=4.323\&limit=10
 ```
 
 # Supprimer un vehicle
