@@ -1,5 +1,8 @@
+IMAGE?= ClaireGuerrini/vehicle-server
+TAG?= dev
+
 .PHONY: all
-all: clean dist unit_test integration_test build
+all: clean dist unit_test integration_test build package
 
 .PHONY: clean
 clean:
@@ -13,7 +16,9 @@ build:
 dist: 
 	mkdir ./dist
 
-
+.PHONY: package
+package: 
+	docker image build --tag=$(IMAGE):$(TAG) . 
 
 DB_CONTAINER_NAME=vehicle-server-dev
 POSTGRES_USER=vehicle-server

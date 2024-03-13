@@ -1,5 +1,3 @@
-FROM golang:1.22
-COPY ./ /app
-WORKDIR /app
-RUN go build ./cmd/server
+FROM gcr.io/distroless/static-debian12
+COPY ./dist /app
 ENTRYPOINT ["/app/server"]
