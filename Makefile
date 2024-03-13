@@ -1,4 +1,4 @@
-IMAGE?= ClaireGuerrini/vehicle-server
+IMAGE?= claireguerrini/vehicle-server
 TAG?= dev
 
 .PHONY: all
