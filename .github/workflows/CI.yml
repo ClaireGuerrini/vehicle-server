@@ -24,6 +24,10 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Push if on main branch
+        if: contains('refs/heads/main', github.ref)
+        run: |
+          make release TAG="main"
       - name: Push if triggered by a tag
         if: startsWith(github.ref, 'refs/tags/')
         run: |
