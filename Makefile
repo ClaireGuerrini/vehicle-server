@@ -1,5 +1,5 @@
 .PHONY: all
-all: clean dist build unit_test integration_test
+all: clean dist unit_test integration_test build
 
 .PHONY: clean
 clean:
